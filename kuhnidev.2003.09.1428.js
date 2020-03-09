@@ -98,13 +98,21 @@ export const UI = props => {
     new Proxy(index || {}, {
       get(target, key) {
         console.log("KEY", key);
-        return target[key] || (() => <code>invalid ui {key}</code>);
+        return (
+          target[key] ||
+          (() => (
+            <code>
+              invalid ui <strong>{key}</strong>
+            </code>
+          ))
+        );
       }
     })
   );
 };
 
-export const renderContainer = ([container, setContainer], handler) => (
+export const renderContainer = ([container, setContainer], handler) => 
+(
   <Container container={container} setContainer={setContainer}>
     {handler}
   </Container>
@@ -113,4 +121,7 @@ export const renderContainer = ([container, setContainer], handler) => (
 export const renderContainers = (containers, handler) => (
   <Container containers={containers}>{handler}</Container>
 );
+
+export const renderUI = (index, handler) => <UI 
+index={index}>{handler}</UI>;
 
