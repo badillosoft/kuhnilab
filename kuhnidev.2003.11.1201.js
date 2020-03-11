@@ -87,7 +87,7 @@ export const UI = props => {
 export const Monitor = props => {
   const { data, title } = props;
 
-  const [showMonitor, setShowMonitor] = useState(true);
+  const [showMonitor, setShowMonitor] = useState(false);
 
   return (
     <div>
