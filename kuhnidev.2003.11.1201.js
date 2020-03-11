@@ -115,8 +115,8 @@ export const Monitor = props => {
         <code>
           {JSON.stringify(data, null, "~")
             .split("\n")
-            .map(line => (
-              <div>
+            .map((line, index) => (
+              <div key={`monitor-line-${index}`}>
                 {line.split("").map(part => {
                   if (part === "~") return <span>&nbsp;&nbsp;&nbsp;</span>;
                   return part;
