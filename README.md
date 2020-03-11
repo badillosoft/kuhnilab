@@ -111,7 +111,7 @@ Se utiliza cuándo se desean usar múltiples contenedores al mismo tiempo, para 
 ```
 ## **Uso de Interfaces**
 
-**Demo: https://codesandbox.io/s/interfaces-y-contenedores-jw5vo**
+**Demo: https://codesandbox.io/s/uso-de-interfaces-gfujz**
 
 ### **Interfaces indexadas &lt;UI /&gt;**
 
