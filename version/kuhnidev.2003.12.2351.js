@@ -8,7 +8,7 @@
 
 import React, { useEffect, useState } from "react";
 
-export const version = "v2003.11.1201";
+export const version = "v2003.12.2351";
 
 export const changelog =
   "Se agregó el componente Monitor y la variable de changelog";
