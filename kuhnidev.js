@@ -8,7 +8,7 @@
 
 import React, { useEffect, useState } from "react";
 
-export const version = "v2003.11.1201";
+export const version = "v2003.12.2351";
 
 export const changelog =
   "Se agregó el componente Monitor y la variable de changelog";
@@ -117,9 +117,12 @@ export const Monitor = props => {
             .split("\n")
             .map((line, index) => (
               <div key={`monitor-line-${index}`}>
-                {line.split("").map(part => {
-                  if (part === "~") return <span>&nbsp;&nbsp;&nbsp;</span>;
-                  return part;
+                {line.split("").map((part, index) => {
+                  return (
+                    <span key={`part-${index}`}>
+                      {part === "~" ? <>&nbsp;&nbsp;&nbsp;</> : part}
+                    </span>
+                  );
                 })}
                 <br />
               </div>
